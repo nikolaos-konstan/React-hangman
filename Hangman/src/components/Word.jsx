@@ -1,16 +1,17 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
 import Letters from "./Letters"
 
 
-const Word = () => {
+const Word = ({capitalCity}) => {
 
-    const hiddenWord="Paris"
+    const hiddenWord=capitalCity
     const hiddenWordArray=hiddenWord.toUpperCase().split('')
 
     
   return (
     <div className='word'>
-        {hiddenWordArray.map(item =><Letters value={item} key={item} />)}
+        {hiddenWordArray.map((item, index) =><Letters value={item} key={index} />)}
     </div>
   )
 }

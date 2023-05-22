@@ -82,10 +82,22 @@ img {
   margin: auto;
 }
 
+.keyclicked{
+  padding: 2rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 80px;
+  margin: auto;
+  background-color: aquamarine;
+}
+
 .word {
   height: 70vh;
   padding: 20px;
-  background-color: pink;
+  background-color: orange;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;

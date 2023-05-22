@@ -1,10 +1,11 @@
 
 /* eslint-disable react/prop-types */
 
-const Key = ({value}) => {
+const Key = ({value, handleClickKey, index, myUsedLetters}) => {
+  
     
   return (
-    <button className="key">{value}</button>
+    <button disabled={myUsedLetters.includes(value)} onClick={()=>handleClickKey(value)} key={index} className={"key"}>{value}</button>
   )
 }
 

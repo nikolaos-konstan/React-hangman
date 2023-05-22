@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 
 import City from './City'
 import Options from './Options'
 
-const SideBar = () => {
+const SideBar = ({handleClickNewGame}) => {
   return (
     <div className='sideBar'>
         <City />
-        <Options />
+        <Options handleClickNewGame={handleClickNewGame}/>
 
     </div>
   )
