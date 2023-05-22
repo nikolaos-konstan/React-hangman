@@ -1,107 +1,27 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+
   background-color: pink;
   overflow: hidden;
-}
-
-.container {
-  display: flex;
-  
-
-}
-
-.sideBar {
-  background-color: antiquewhite;
-  top: 0;
-  left: 0;
-  width: 20vw;
-  height: 100vh;
-}
-
-.mainPage {
-  background-color: palevioletred;
-  top: 0;
-  right: 0;
-  width: 80vw;
-  height: 100vh;
-}
-
-
-
-.city {
-  height: 50vh;
-  background-color: papayawhip;
-}
-
-.options {
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
  
-}
-
-.btn {
-  font-size: 1.5rem;
-  width: 8rem;
-  height: 6rem;
-  display: block;
-  margin: auto;
-  margin-top: 2.5rem;
-  
   
 }
 
-img {
-  width: 16vw;
-  object-fit: contain;
-}
-
-.description {
-  padding: 0.5rem;
-  overflow: hidden;
-}
-
-.keyboard {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px 30px;
-}
-
-.key {
-  padding: 2rem;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-  height: 80px;
-  margin: auto;
-}
-
-.keyclicked{
-  padding: 2rem;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-  height: 80px;
-  margin: auto;
-  background-color: aquamarine;
+.App {
+  height: 100vh;
 }
 
 .word {
   height: 70vh;
-  padding: 20px;
+  width: 100vw;
   background-color: orange;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+
+  
 }
 
 .letter {
@@ -115,3 +35,61 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.invletter {
+  font-size: 6rem;
+  border-radius: 20px;
+  color: bisque;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  background-color: bisque;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container {
+  display: flex;
+  height: 30vh;
+  width: 100vw;
+  
+}
+
+.options {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 1.5rem;
+  width: 8rem;
+  height: 6rem;
+  margin: 1rem;
+}
+
+
+.keyboard {
+  padding: 1rem;
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 30px;
+}
+
+.key {
+  padding: 3rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 80px;
+  margin: auto;
+}
+

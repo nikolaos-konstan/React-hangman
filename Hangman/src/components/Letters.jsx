@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
-const Letters = ({value}) => {
-  let found=true
+const Letters = ({value, myUsedLetters, index}) => {
+  
+  
   // JSX rendering
   return (
-    <div className="letter">
-      {found?value:"_"}
+    <div className="letter" key={index} >
+      
+        {myUsedLetters.includes(value)||value==="'"||value==="-"||value===" "?value:"_"}
+      
     </div>
   );
 };
