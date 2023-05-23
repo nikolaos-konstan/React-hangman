@@ -3,10 +3,14 @@
 import Letters from "./Letters"
 
 
-const Word = ({capitalCity, myUsedLetters}) => {
 
-    const hiddenWord=capitalCity
+const Word = ({myCapital, myUsedLetters}) => {
+
+    
+
+    const hiddenWord=myCapital
     const hiddenWordArray=hiddenWord.toUpperCase().split('')
+    
     console.log(hiddenWord)
     console.log(hiddenWordArray)
 
