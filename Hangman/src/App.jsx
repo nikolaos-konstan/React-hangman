@@ -23,8 +23,7 @@ function App() {
     setMyCapital(capitals[randomnumber].capital)
     setMyCountry(capitals[randomnumber].country)
     setMyUsedLetters([])
-    console.log(myCapital)
-    console.log(myCountry)
+  
   }
 
   
@@ -35,8 +34,7 @@ function App() {
     
     
   }
-  console.log(myClickedLetter)
-  console.log(myUsedLetters)
+ 
   
 
   return (
@@ -46,6 +44,7 @@ function App() {
       myUsedLetters={myUsedLetters}
       setIsOver={setIsOver}
       isOver={isOver}
+      myClickedLetter={myClickedLetter}
        />
        <Message 
        myCountry={myCountry}

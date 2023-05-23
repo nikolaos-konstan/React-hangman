@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 
+
 import Letters from "./Letters"
 
 
 
-const Word = ({myCapital, myUsedLetters}) => {
+const Word = ({myCapital, myUsedLetters,}) => {
 
     
 
