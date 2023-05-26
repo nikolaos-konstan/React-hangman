@@ -5,20 +5,12 @@ import Letters from "./Letters"
 
 
 
-const Word = ({myCapital, myUsedLetters,}) => {
-
-    
-
-    const hiddenWord=myCapital
-    const hiddenWordArray=hiddenWord.toUpperCase().split('')
-    
-    console.log(hiddenWord)
-    console.log(hiddenWordArray)
-
+const Word = ({myCapitalArray, myUsedLetters}) => {
+   
     
   return (
     <div className='word'>
-        {hiddenWordArray.map((item, index) =><Letters myUsedLetters={myUsedLetters} value={item} key={index} />)}
+        {myCapitalArray.map((item, index) =><Letters myUsedLetters={myUsedLetters} value={item} key={index} />)}
     </div>
   )
 }

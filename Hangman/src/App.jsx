@@ -10,10 +10,14 @@ import { useState } from 'react'
 function App() {
 
   const [myCapital, setMyCapital] = useState('')
+  const [myCapitalArray, setMyCapitalArray] = useState([])
   const [myCountry, setMyCountry] = useState('')
   const [myClickedLetter, setMyClickedLetter] = useState('')
   const [myUsedLetters, setMyUsedLetters] = useState([])
   const [isOver, setIsOver] = useState(false)
+  
+  const [test, setTest] = useState([])
+  
   
   
   
@@ -21,26 +25,31 @@ function App() {
     setMyClickedLetter('')
     const randomnumber = Math.floor(Math.random() * 194)
     setMyCapital(capitals[randomnumber].capital)
+    setMyCapitalArray(capitals[randomnumber].capital.toUpperCase().split(''))
+    setTest(capitals[randomnumber].capital.toUpperCase().split(''))
     setMyCountry(capitals[randomnumber].country)
     setMyUsedLetters([])
-  
   }
 
-  
+
 
   const handleClickKey= (letter) =>{
     setMyClickedLetter(letter)
     setMyUsedLetters([...myUsedLetters, letter])
-    
-    
+    setTest(test.filter(x=> x!==myClickedLetter))
+    console.log(test)
   }
- 
+  /*let updatedArray = myCapitalArray
+  updatedArray = updatedArray.filter(x=> x!==myClickedLetter)
+  console.log(updatedArray)
+  */
   
+  console.log(test)
 
   return (
     <div>
       <Word
-      myCapital = {myCapital}
+      myCapitalArray = {myCapitalArray}
       myUsedLetters={myUsedLetters}
       setIsOver={setIsOver}
       isOver={isOver}
@@ -48,6 +57,7 @@ function App() {
        />
        <Message 
        myCountry={myCountry}
+       test={test}
        />
        <div className="container">
         <Options handleClickNewGame = {handleClickNewGame}/>
