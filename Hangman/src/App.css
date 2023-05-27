@@ -1,19 +1,12 @@
 html, body {
   margin: 0;
   padding: 0;
-
   background-color: firebrick;
-  overflow: hidden;
- 
-  
-}
-
-.App {
-  height: 100vh;
+  overflow: hidden; 
 }
 
 .word {
-  height: 60vh;
+  height: 50vh;
   width: 100vw;
   background-color: orange;
   display: flex;
@@ -22,8 +15,16 @@ html, body {
   align-items: center;
 }
 
+.winning {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 p{
-  height: 10vh;
+  height: 5vh;
+  font-size: 2rem;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -34,19 +35,6 @@ p{
 .letter {
   font-size: 6rem;
   border-radius: 20px;
-  height: 200px;
-  width: 200px;
-  display: flex;
-  background-color: bisque;
-  margin: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.invletter {
-  font-size: 6rem;
-  border-radius: 20px;
-  color: bisque;
   height: 200px;
   width: 200px;
   display: flex;
@@ -81,12 +69,12 @@ p{
 
 
 .keyboard {
+  background-color: aqua;
   padding: 1rem;
   display: flex;
-  width: 90vw;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px 30px;
+  gap: 0px 30px;
 }
 
 .key {

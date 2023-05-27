@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 
-const Options = ({handleClickNewGame}) => {
+const Options = ({handleClickNewGame, handleClickHint}) => {
   return (
     <div className='options'>
-        <button onClick={handleClickNewGame} className='btn'>New Game</button>
+        <button onClick={handleClickNewGame} className='btn'>NEW GAME</button>
       
-        <button className='btn'>Hint</button>
+        <button onClick={handleClickHint} className='btn'>HINT</button>
     </div>
   )
 }

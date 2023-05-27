@@ -1,5 +1,6 @@
 
 import capitals from '../public/capitals.json'
+import hints from '../public/hints.json'
 import './App.css'
 import Word from './components/Word'
 import Message from './components/Message'
@@ -15,6 +16,7 @@ function App() {
   const [myClickedLetter, setMyClickedLetter] = useState('')
   const [myUsedLetters, setMyUsedLetters] = useState([])
   const [isOver, setIsOver] = useState(false)
+  const [hint, setHint] = useState("Click on the \"HINT\" button to get a hint. They are really helpful.")
   
   
   useEffect(()=>{
@@ -31,6 +33,7 @@ function App() {
     setMyCapitalArray(capitals[randomnumber].capital.replace(/[^\w\s]|_/g, '').replace(/\s+/g, '').toUpperCase().split(''))
     setMyCountry(capitals[randomnumber].country)
     setMyUsedLetters([])
+    setHint("Click on the \"HINT\" button to get a hint. They are really helpful.")
   }
 
 
@@ -41,6 +44,9 @@ function App() {
     
   }
  
+  const handleClickHint=() => {
+    setHint(hints[Math.floor(Math.random() * 77)])
+  }
   
   console.log(myCapitalArray)
 
@@ -56,15 +62,20 @@ function App() {
        <Message 
        myCountry={myCountry}
        myCapitalArray={myCapitalArray}
+       hint={hint}
        />
        <div className="container">
-        <Options handleClickNewGame = {handleClickNewGame}/>
+        <Options
+        handleClickNewGame = {handleClickNewGame}
+        handleClickHint={handleClickHint}
+        />
         <Keyboard
         handleClickKey={handleClickKey}
         myUsedLetters={myUsedLetters}
         setIsOver={setIsOver}
         isOver={isOver}
         myCapital = {myCapital}
+        myCapitalArray={myCapitalArray}
         />
       </div>
     </div>

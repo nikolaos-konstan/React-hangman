@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import Key from './Key'
 
-const Keyboard = ({handleClickKey, myUsedLetters, isOver, setIsOver}) => {
+const Keyboard = ({handleClickKey, myUsedLetters, isOver, setIsOver, myCapitalArray}) => {
 
     const alphabet = [...Array(26)].map((_, index) => String.fromCharCode(65 + index));
     
@@ -14,7 +14,7 @@ const Keyboard = ({handleClickKey, myUsedLetters, isOver, setIsOver}) => {
                                       myUsedLetters={myUsedLetters}
                                       setIsOver={setIsOver}
                                       isOver={isOver}
-                                      
+                                      myCapitalArray={myCapitalArray}
                                       />)}
     </div>
   )

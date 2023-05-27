@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 
-export const Message = ({myCountry, myCapitalArray}) => {
+export const Message = ({myCountry, myCapitalArray, hint}) => {
   return (
     <div>
-    <p>This is the capital of {myCapitalArray.length===0?myCountry:"find it"}</p>
+      <h1 className="winning">{myCapitalArray.length===0?`Congratulations! You won! You found the capital of ${myCountry}.`:""}</h1>
+      <p>{hint}</p>
     </div>
   )
 }
