@@ -17,6 +17,7 @@ function App() {
   const [myUsedLetters, setMyUsedLetters] = useState([])
   const [isOver, setIsOver] = useState(false)
   const [hint, setHint] = useState("Click on the \"HINT\" button to get a hint. They are really helpful.")
+  const [counter, setCounter] = useState(0)
   
   
   useEffect(()=>{
@@ -34,6 +35,7 @@ function App() {
     setMyCountry(capitals[randomnumber].country)
     setMyUsedLetters([])
     setHint("Click on the \"HINT\" button to get a hint. They are really helpful.")
+    setCounter(0)
   }
 
 
@@ -41,7 +43,7 @@ function App() {
   const handleClickKey= (letter) =>{
     setMyClickedLetter(letter)
     setMyUsedLetters([...myUsedLetters, letter])
-    
+    setCounter(prev=>prev+1)
   }
  
   const handleClickHint=() => {
@@ -49,6 +51,7 @@ function App() {
   }
   
   console.log(myCapitalArray)
+  console.log(counter)
 
   return (
     <div>
@@ -62,7 +65,9 @@ function App() {
        <Message 
        myCountry={myCountry}
        myCapitalArray={myCapitalArray}
+       myCapital={myCapital}
        hint={hint}
+       counter={counter}
        />
        <div className="container">
         <Options
