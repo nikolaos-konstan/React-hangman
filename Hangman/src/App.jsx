@@ -5,28 +5,30 @@ import Word from './components/Word'
 import Message from './components/Message'
 import Options from './components/Options'
 import Keyboard from './components/Keyboard'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
 
   const [myCapital, setMyCapital] = useState('')
-  const [myCapitalArray, setMyCapitalArray] = useState([])
+  const [myCapitalArray, setMyCapitalArray] = useState(["do","not","empty"])
   const [myCountry, setMyCountry] = useState('')
   const [myClickedLetter, setMyClickedLetter] = useState('')
   const [myUsedLetters, setMyUsedLetters] = useState([])
   const [isOver, setIsOver] = useState(false)
   
-  const [test, setTest] = useState([])
   
-  
+  useEffect(()=>{
+   
+    setMyCapitalArray(myCapitalArray.filter(x=> x!==myClickedLetter))
+    console.log(myCapitalArray)
+  }, [myClickedLetter])
   
   
   const handleClickNewGame = () =>{
     setMyClickedLetter('')
     const randomnumber = Math.floor(Math.random() * 194)
     setMyCapital(capitals[randomnumber].capital)
-    setMyCapitalArray(capitals[randomnumber].capital.toUpperCase().split(''))
-    setTest(capitals[randomnumber].capital.toUpperCase().split(''))
+    setMyCapitalArray(capitals[randomnumber].capital.replace(/[^\w\s]|_/g, '').replace(/\s+/g, '').toUpperCase().split(''))
     setMyCountry(capitals[randomnumber].country)
     setMyUsedLetters([])
   }
@@ -36,20 +38,16 @@ function App() {
   const handleClickKey= (letter) =>{
     setMyClickedLetter(letter)
     setMyUsedLetters([...myUsedLetters, letter])
-    setTest(test.filter(x=> x!==myClickedLetter))
-    console.log(test)
+    
   }
-  /*let updatedArray = myCapitalArray
-  updatedArray = updatedArray.filter(x=> x!==myClickedLetter)
-  console.log(updatedArray)
-  */
+ 
   
-  console.log(test)
+  console.log(myCapitalArray)
 
   return (
     <div>
       <Word
-      myCapitalArray = {myCapitalArray}
+      myCapital = {myCapital}
       myUsedLetters={myUsedLetters}
       setIsOver={setIsOver}
       isOver={isOver}
@@ -57,7 +55,7 @@ function App() {
        />
        <Message 
        myCountry={myCountry}
-       test={test}
+       myCapitalArray={myCapitalArray}
        />
        <div className="container">
         <Options handleClickNewGame = {handleClickNewGame}/>
