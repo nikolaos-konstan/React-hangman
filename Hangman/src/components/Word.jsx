@@ -11,7 +11,7 @@ const Word = ({myCapital, myUsedLetters}) => {
    
     
   return (
-    <div className='word'>
+    <div className='grid-item grid-item-1'>
         {hiddenWord.map((item, index) =><Letters myUsedLetters={myUsedLetters} value={item} key={index} />)}
     </div>
   )

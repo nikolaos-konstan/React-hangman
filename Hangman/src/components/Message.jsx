@@ -21,11 +21,11 @@ export const Message = ({myCountry, myCapitalArray, hint, counter, myCapital}) =
   
 
   return (
-    <div>
-      <h1 className="winning">
-        {myCapitalArray.length===0?`You found the capital of ${myCountry} with ${finalCount} ${finalCount===1?"mistake":"mistakes"}! ${finalMessage}`:""}
+    <div className='grid-item grid-item-2'>
+      <h1 >
+        {myCapitalArray.length===0?`You found the capital of ${myCountry} with ${finalCount} ${finalCount===1?"mistake":"mistakes"}! ${finalMessage}`:"Find the capital!"}
         </h1>
-      <p>{hint}</p>
+      <h2>{hint}</h2>
     </div>
   )
 }

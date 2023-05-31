@@ -54,7 +54,7 @@ function App() {
   console.log(counter)
 
   return (
-    <div>
+    <div className='grid-container'>
       <Word
       myCapital = {myCapital}
       myUsedLetters={myUsedLetters}
@@ -69,7 +69,6 @@ function App() {
        hint={hint}
        counter={counter}
        />
-       <div className="container">
         <Options
         handleClickNewGame = {handleClickNewGame}
         handleClickHint={handleClickHint}
@@ -82,7 +81,6 @@ function App() {
         myCapital = {myCapital}
         myCapitalArray={myCapitalArray}
         />
-      </div>
     </div>
   )
 }

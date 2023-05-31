@@ -6,7 +6,7 @@ const Keyboard = ({handleClickKey, myUsedLetters, isOver, setIsOver, myCapitalAr
     const alphabet = [...Array(26)].map((_, index) => String.fromCharCode(65 + index));
     
   return (
-    <div className='keyboard'>
+    <div className='grid-item grid-item-4'>
         {alphabet.map((item, index) =><Key
                                       value={item}
                                       key={index}

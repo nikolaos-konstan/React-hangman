@@ -2,10 +2,10 @@
 
 const Options = ({handleClickNewGame, handleClickHint}) => {
   return (
-    <div className='options'>
-        <button onClick={handleClickNewGame} className='btn'>NEW GAME</button>
+    <div className='grid-item grid-item-3'>
+        <button onClick={handleClickNewGame} className='btn'><div className="span">NEW GAME</div></button>
       
-        <button onClick={handleClickHint} className='btn'>HINT</button>
+        <button onClick={handleClickHint} className='btn'><div className="span">HINT</div></button>
     </div>
   )
 }
