@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Josefin+Sans:wght@600&family=Lobster&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,7 +8,7 @@
   box-sizing: border-box;
 }
 .grid-container {
-  background-color: firebrick;
+  background-color: #89C9B8;
   width: 100vw;
   height: 100vh;
   padding: 1rem;
@@ -23,7 +24,7 @@
 
 .grid-item-1 {
   grid-column: span 2;
-  background-color: antiquewhite;
+  background-color: #E3F4F4;
   display: flex;
   flex-flow: row nowrap;
 
@@ -32,7 +33,7 @@
 }
 .grid-item-2 {
   grid-column: span 2;
-  background-color: aqua;
+  background-color: #FFE5B9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +42,7 @@
   
 }
 .grid-item-3 {
-  background-color: sandybrown;
+  background-color: #E3F4F4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +50,7 @@
   
 }
 .grid-item-4 {
-  background-color: blueviolet;
+  background-color: #E3F4F4;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -57,7 +58,8 @@
 }
 
 .letter {
-  background-color: crimson;
+  background-color: #FEFAE0;
+  color: #5E454B;
   margin: 0.5em;
   flex: 0 1 2em;
   height: 2em;
@@ -72,7 +74,9 @@
 }
 
 .key {
-  background-color: palegreen;
+  background-color: #79B4B7;
+  color: #FCF8E8;
+  font-family: "Josefin Sans", sans-serif;
   margin: 0.2em;
   flex: 0 1 auto;
   
@@ -89,7 +93,7 @@
   font-weight: bold;
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif;
-  background-color: #fdcb6e;
+  background-color: #F2D388;
   cursor: pointer;
   box-shadow: 5px 5px 0 0;
   transition: 0.2s;
@@ -99,8 +103,6 @@
 
   
 }
-
-
 
 .span {
   position: absolute;
@@ -129,11 +131,19 @@
 }
 
 h1 {
-  background-color: #2e86bb;
+  color: #00425A;
+  font-family: "Lobster", sans-serif;
   
 }
 
 h2 {
-  background-color: aliceblue;
+  color: #00425A;
+  font-family: "Dosis", sans-serif;
+  
+}
 
+:disabled {
+ 
+  color: #FFA299;
+  transition: 0.2s;
 }
