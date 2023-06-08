@@ -16,14 +16,14 @@ function App() {
   const [myClickedLetter, setMyClickedLetter] = useState('')
   const [myUsedLetters, setMyUsedLetters] = useState([])
   const [isOver, setIsOver] = useState(false)
-  const [hint, setHint] = useState("Click on the \"HINT\" button to get a hint. They are really helpful.")
+  const [hint, setHint] = useState("Click on the \"HINT\" button to get a hint. They are extremely helpful.")
   const [counter, setCounter] = useState(0)
   
   
   useEffect(()=>{
    
     setMyCapitalArray(myCapitalArray.filter(x=> x!==myClickedLetter))
-    console.log(myCapitalArray)
+    //console.log(myCapitalArray)
   }, [myClickedLetter])
   
   
@@ -50,8 +50,8 @@ function App() {
     setHint(hints[Math.floor(Math.random() * 77)])
   }
   
-  console.log(myCapitalArray)
-  console.log(counter)
+  //console.log(myCapitalArray)
+  //console.log(counter)
 
   return (
     <div className='grid-container'>

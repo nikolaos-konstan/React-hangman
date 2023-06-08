@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Josefin+Sans:wght@600&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Josefin+Sans:wght@600&family=Lobster&family=Merriweather:ital,wght@1,300&display=swap');
 
 *,
 *::before,
@@ -130,10 +130,10 @@
   opacity: 1;
 }
 
-h1 {
+.message {
   color: #00425A;
   font-family: "Lobster", sans-serif;
-  
+  font-size: 38px;
 }
 
 h2 {
