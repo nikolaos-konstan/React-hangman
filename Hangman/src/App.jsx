@@ -24,7 +24,7 @@ function App() {
    
     setMyCapitalArray(myCapitalArray.filter(x=> x!==myClickedLetter))
     //console.log(myCapitalArray)
-  }, [myClickedLetter])
+  }, [myCapitalArray, myClickedLetter])
   
   
   const handleClickNewGame = () =>{
