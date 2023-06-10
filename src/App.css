@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Josefin+Sans:wght@600&family=Lobster&family=Merriweather:ital,wght@1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Dosis&family=Josefin+Sans:wght@600&family=Lobster&family=Merriweather:ital,wght@1,300&display=swap");
 
 *,
 *::before,
@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 .grid-container {
-  background-color: #89C9B8;
+  background-color: #89c9b8;
   width: 100vw;
   height: 100vh;
   padding: 1rem;
@@ -18,13 +18,13 @@
   grid-template-rows: 3fr 1fr 2fr;
 }
 
-.grid-item{
+.grid-item {
   border-radius: 10px;
 }
 
 .grid-item-1 {
   grid-column: span 2;
-  background-color: #E3F4F4;
+  background-color: #e3f4f4;
   display: flex;
   flex-flow: row nowrap;
 
@@ -33,24 +33,22 @@
 }
 .grid-item-2 {
   grid-column: span 2;
-  background-color: #FFE5B9;
+  background-color: #ffe5b9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
 }
 .grid-item-3 {
-  background-color: #E3F4F4;
+  background-color: #e3f4f4;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 .grid-item-4 {
-  background-color: #E3F4F4;
+  background-color: #e3f4f4;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -58,8 +56,8 @@
 }
 
 .letter {
-  background-color: #FEFAE0;
-  color: #5E454B;
+  background-color: #fefae0;
+  color: #5e454b;
   margin: 0.5em;
   flex: 0 1 2em;
   height: 2em;
@@ -70,38 +68,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .key {
-  background-color: #79B4B7;
-  color: #FCF8E8;
+  background-color: #79b4b7;
+  color: #fcf8e8;
   font-family: "Josefin Sans", sans-serif;
   margin: 0.2em;
   flex: 0 1 auto;
-  
+
   border-radius: 5px;
   font-size: 1.5rem;
- 
 }
 
 .btn {
   flex: 1 1 auto;
-  
-  
+
   margin: 10px;
   font-weight: bold;
   font-size: 2rem;
   font-family: "Josefin Sans", sans-serif;
-  background-color: #F2D388;
+  background-color: #f2d388;
   cursor: pointer;
   box-shadow: 5px 5px 0 0;
   transition: 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  
 }
 
 .span {
@@ -109,7 +102,6 @@
   text-decoration: none;
   color: #000;
   z-index: 1000;
- 
 }
 
 .btn::after {
@@ -118,7 +110,7 @@
   left: 0;
   width: 170px;
   height: 70px;
- 
+
   opacity: 0;
   transition: 0.3s;
 }
@@ -131,19 +123,18 @@
 }
 
 .message {
-  color: #00425A;
+  color: #00425a;
   font-family: "Lobster", sans-serif;
   font-size: 38px;
 }
 
 h2 {
-  color: #00425A;
+  color: #00425a;
   font-family: "Dosis", sans-serif;
-  
+  padding-left: 1em;
 }
 
 :disabled {
- 
-  color: #FFA299;
+  color: #ffa299;
   transition: 0.2s;
 }
