@@ -1,4 +1,3 @@
 # React-hangman
 
-First react project.
-Built with Vite
+https://nikolaos-konstan.github.io/Hangman/
